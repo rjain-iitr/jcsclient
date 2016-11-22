@@ -25,6 +25,9 @@ OPTIONS :
     [--encrypted <boolean>]
     Specify this to allow volume to be encrypted
 
+    [--volume-type <value>]
+    Specify standard for hdd volume, ms1 for ssd volumes. Default is standard.
+
 EXAMPLES :
     jcs compute create-volume --size 5
 
@@ -33,3 +36,12 @@ EXAMPLES :
     jcs compute create-volume --snapshot-id b2ba5a18-d8cc-4223-bf62-2a866f5890bf
     
     jcs compute create-volume --snapshot-id b2ba5a18-d8cc-4223-bf62-2a866f5890bf --size 100
+
+    jcs compute create-volume --size 20 --volume-type ms1
+
+    jcs compute create-volume --size 10 --encrypted true --volume-type standard
+
+    jcs compute create-volume --size 5 --encrypted true --volume-type ms1
+
+    jcs compute create-volume --snapshot-id b2ba5a18-d8cc-4223-bf62-2a866f5890bf --volume-type ms1
+

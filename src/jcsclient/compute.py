@@ -292,6 +292,7 @@ class Controller(object):
         1. Size as integer (for empty volume)
         2. Snapshot Id
         3. Encrypted
+        3. VolumeType
         """
         return volume.create_volume(self.url, self.verb,
                                     self.headers, self.version,
